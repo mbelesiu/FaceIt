@@ -14,3 +14,9 @@ app.use(express.static(path.join(__dirname, '/../public')));
 app.get('/api/', ()=>{
   res.sendStatus(200);
 });
+
+const PORT = 3000;
+
+app.listen(PORT, () => {
+  console.log(`Listening on Port: ${PORT}`);
+});

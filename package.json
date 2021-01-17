@@ -4,7 +4,9 @@
   "description": "Facial Recognition Security Software Demo",
   "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --watch --progress",
+    "start": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
@@ -34,13 +36,18 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "@tensorflow/tfjs": "^2.8.3",
+    "@tensorflow/tfjs-node": "^2.8.3",
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "css-loader": "^5.0.1",
     "express": "^4.17.1",
+    "face-api.js": "^0.22.2",
+    "face-recognition": "^0.9.4",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-webcam": "^5.2.2",
     "style-loader": "^2.0.0",
     "underscore": "^1.12.0",
     "webpack": "^5.12.1"
