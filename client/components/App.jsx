@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Webcam from "react-webcam";
 
 function App(){
-
+  const [imageSrc, setImageSrc] = useState(null);
   const videoConstraints = {
     width: 1280,
     height: 720,
@@ -13,7 +13,7 @@ function App(){
 
   const capture = React.useCallback(
     () => {
-      const imageSrc = webcamRef.current.getScreenshot();
+      setImageSrc(webcamRef.current.getScreenshot())
     },
     [webcamRef]
   );
@@ -30,6 +30,7 @@ function App(){
       videoConstraints={videoConstraints}
       />
       <button onClick={capture}>Capture photo</button>
+      {imageSrc ? <img src={imageSrc} /> : null}
     </div>
   )
 }
