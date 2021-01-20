@@ -43,7 +43,6 @@
     "css-loader": "^5.0.1",
     "express": "^4.17.1",
     "face-api.js": "^0.22.2",
-    "face-recognition": "^0.9.4",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
